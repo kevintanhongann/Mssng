@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data >
+        <variable
+            name="date"
+            type="java.util.Date" />
+        <variable
+            name="person"
+            type="android.com.mssng.domain.Person" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView android:textAppearance="?android:textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:text="@{person.firstname + ' ' + person.lastname }"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView android:text="Last Seen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/textview_lastseen"
+                    android:layout_width="match_parent"
+                    android:text="@{person.lastSeen}"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
+

@@ -7,4 +7,8 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_mapview"
+        android:title="@string/switch_to_map"
+        app:showAsAction="always" />
 </menu>

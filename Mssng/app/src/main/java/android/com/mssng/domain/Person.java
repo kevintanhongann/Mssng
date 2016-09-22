@@ -1,5 +1,8 @@
 package android.com.mssng.domain;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+
 import java.util.Date;
 import java.util.List;
 
@@ -7,19 +10,51 @@ import java.util.List;
  * Created by kevintan on 22/09/2016.
  */
 
-public class Person {
+public class Person  extends BaseObservable{
+    @Bindable
     private String status;
+    @Bindable
     private String firstname;
+    @Bindable
     private String lastname;
+    @Bindable
     private String nickname;
+    @Bindable
     private Date lastSeen;
+    @Bindable
     private String sex;
+    @Bindable
     private Date created;
+    @Bindable
     private Date updated;
+    @Bindable
     private float height;
+    @Bindable
     private float weight;
+    @Bindable
     private List<String> imageUrls;
-//    private String race;
+
+    private Double latitude;
+
+    private Double longitude;
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    //    private String race;
 //    private String ethnicity;
 
     public String getStatus() {
@@ -124,6 +159,8 @@ public class Person {
                 ", height=" + height +
                 ", weight=" + weight +
                 ", imageUrls=" + imageUrls +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
                 '}';
     }
 }
