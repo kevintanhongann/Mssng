@@ -3,13 +3,15 @@ package com.mssng.android.domain;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
 import java.util.Date;
 import java.util.List;
 
 /**
  * Created by kevintan on 22/09/2016.
  */
-
+@IgnoreExtraProperties
 public class Person  extends BaseObservable{
     @Bindable
     private String status;
