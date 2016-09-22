@@ -35,16 +35,16 @@ db = firebase.database()
 
 ##
 data = {"status": "Missing", 
-        "firstname": "Abidin",
-        "lastname": "Zulkarnain",
-        "nickname": "none",
-        "lastSeen": "02/03/2002",
+        "firstname": "Besant Singh",
+        "lastname": "A/L Kanaiah Singh",
+        "nickname": "Besant",
+        "lastSeen": "12/02/2007",
         "sex":"male",
-        "created": "05/03/2002",
-        "updated": "08/03/2002",
-        "height": "160cm",
-        "weight": "65kg",
-        "imageUrls":"http://www.rmp.gov.my/filebase/picture/oh/24_39700.5188885185.jpg",
+        "created": "12/02/2007",
+        "updated": "25/03/2007",
+        "height": "180cm",
+        "weight": "70kg",
+        "imageUrls":"http://www.rmp.gov.my/filebase/picture/oh/000041_07_39342.6072061227.jpg",
         "latitude": "3.157279",
         "longitude": "101.716010"}
 
@@ -52,4 +52,4 @@ data = {"status": "Missing",
 
 #db.child("persons").push(data)
 
-results = db.child("persons").child("Abidin").update(data, user['idToken'])
+results = db.child("persons").child("Besant Singh").push(data, user['idToken'])
