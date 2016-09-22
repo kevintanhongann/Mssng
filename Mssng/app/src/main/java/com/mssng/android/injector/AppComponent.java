@@ -1,6 +1,7 @@
 package com.mssng.android.injector;
 
 import com.google.firebase.database.DatabaseReference;
+import com.mssng.android.PeopleListFragment;
 
 import javax.inject.Singleton;
 
@@ -12,5 +13,5 @@ import dagger.Component;
 @Component(modules = AppModule.class)
 @Singleton
 public interface AppComponent {
-
+    void inject(PeopleListFragment peopleListFragment);
 }

@@ -2,6 +2,7 @@ package com.mssng.android;
 
 import android.app.Application;
 
+import com.mssng.android.injector.AppComponent;
 import com.mssng.android.injector.AppModule;
 import com.mssng.android.injector.DaggerAppComponent;
 
@@ -10,10 +11,17 @@ import com.mssng.android.injector.DaggerAppComponent;
  */
 
 public class MssngApplication extends Application {
+
+    AppComponent appComponent;
+
     @Override
     public void onCreate() {
         super.onCreate();
 
-        DaggerAppComponent.builder().appModule(new AppModule()).build();
+        appComponent = DaggerAppComponent.builder().appModule(new AppModule()).build();
+    }
+
+    public AppComponent getAppComponent() {
+        return appComponent;
     }
 }
