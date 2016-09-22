@@ -1,5 +1,7 @@
 package com.mssng.android.injector;
 
+import com.google.firebase.database.DatabaseReference;
+
 import javax.inject.Singleton;
 
 import dagger.Component;
@@ -10,4 +12,5 @@ import dagger.Component;
 @Component(modules = AppModule.class)
 @Singleton
 public interface AppComponent {
+
 }

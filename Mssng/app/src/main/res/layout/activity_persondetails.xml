@@ -81,6 +81,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
+                <Button android:text="Report Seen"
+                    android:id="@+id/button_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
     </android.support.design.widget.CoordinatorLayout>
