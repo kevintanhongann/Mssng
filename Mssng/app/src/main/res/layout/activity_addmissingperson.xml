@@ -56,7 +56,10 @@
                     android:layout_height="wrap_content"
                     android:text="Last Seen" />
 
-
+                <Button android:id="@+id/button_submit"
+                    android:text="Submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
         </ScrollView>
