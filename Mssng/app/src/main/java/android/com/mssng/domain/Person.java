@@ -1,6 +1,7 @@
 package android.com.mssng.domain;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by kevintan on 22/09/2016.
@@ -17,6 +18,7 @@ public class Person {
     private Date updated;
     private float height;
     private float weight;
+    private List<String> imageUrls;
 //    private String race;
 //    private String ethnicity;
 
@@ -100,6 +102,14 @@ public class Person {
         this.weight = weight;
     }
 
+    public List<String> getImageUrls() {
+        return imageUrls;
+    }
+
+    public void setImageUrls(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -113,6 +123,7 @@ public class Person {
                 ", updated=" + updated +
                 ", height=" + height +
                 ", weight=" + weight +
+                ", imageUrls=" + imageUrls +
                 '}';
     }
 }
