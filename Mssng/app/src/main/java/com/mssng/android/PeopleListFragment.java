@@ -1,6 +1,8 @@
 package com.mssng.android;
 
+import com.google.firebase.database.DatabaseReference;
 import com.mssng.android.R;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.firebase.database.FirebaseDatabase;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,10 +28,13 @@ public class PeopleListFragment extends Fragment {
     @BindView(R.id.recyclerview_personlist)
     RecyclerView mRecyclerView;
 
+    @Inject
+    DatabaseReference baseRef;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_personlist, container ,false);
+        View view = inflater.inflate(R.layout.fragment_personlist, container, false);
         ButterKnife.bind(this, view);
         return view;
     }
@@ -41,13 +48,17 @@ public class PeopleListFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        FirebaseDatabase.getInstance().getReference("");
     }
 
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        MssngApplication application = (MssngApplication) getActivity().getApplication();
+        application.getAppComponent().inject(this);
+
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(true);
