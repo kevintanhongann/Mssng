@@ -1,4 +1,4 @@
-package android.com.mssng;
+package com.mssng.android;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

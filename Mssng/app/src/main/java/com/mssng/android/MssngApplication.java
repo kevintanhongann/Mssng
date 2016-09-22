@@ -1,4 +1,4 @@
-package android.com.mssng;
+package com.mssng.android;
 
 import android.app.Application;
 
@@ -10,6 +10,7 @@ public class MssngApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
 
     }
 }

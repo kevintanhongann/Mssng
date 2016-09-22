@@ -1,5 +1,6 @@
-package android.com.mssng;
+package com.mssng.android;
 
+import com.mssng.android.R;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_content, new PeopleListFragment()).addToBackStack(null).commit();
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

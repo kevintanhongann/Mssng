@@ -1,6 +1,6 @@
-package android.com.mssng;
+package com.mssng.android;
 
-import android.com.mssng.domain.Person;
+import com.mssng.android.domain.Person;
 
 /**
  * Created by kevintan on 22/09/2016.

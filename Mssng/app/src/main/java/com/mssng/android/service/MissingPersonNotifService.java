@@ -1,4 +1,4 @@
-package android.com.mssng.service;
+package com.mssng.android.service;
 
 import android.app.IntentService;
 import android.content.Intent;

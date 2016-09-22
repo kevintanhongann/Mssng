@@ -1,4 +1,4 @@
-package android.com.mssng.domain;
+package com.mssng.android.domain;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
@@ -20,7 +20,7 @@ public class Person  extends BaseObservable{
     @Bindable
     private String nickname;
     @Bindable
-    private Date lastSeen;
+    private String lastSeen;
     @Bindable
     private String sex;
     @Bindable
@@ -89,11 +89,11 @@ public class Person  extends BaseObservable{
         this.nickname = nickname;
     }
 
-    public Date getLastSeen() {
+    public String getLastSeen() {
         return lastSeen;
     }
 
-    public void setLastSeen(Date lastSeen) {
+    public void setLastSeen(String lastSeen) {
         this.lastSeen = lastSeen;
     }
 

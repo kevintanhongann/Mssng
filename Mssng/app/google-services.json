@@ -8,17 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:464355925636:android:4d67706610a21b4e",
+        "mobilesdk_app_id": "1:464355925636:android:6eb510a3e441885c",
         "android_client_info": {
-          "package_name": "android.com.mssng"
+          "package_name": "com.mssng.android"
         }
       },
       "oauth_client": [
         {
-          "client_id": "464355925636-1ko9v6cs22bp50p4n43gbjq5dg2tffms.apps.googleusercontent.com",
+          "client_id": "464355925636-fkjv3n487vk6doaugsfi3jlmjd5islhb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "android.com.mssng",
+            "package_name": "com.mssng.android",
             "certificate_hash": "6CD7DA2094C51D63A2E25358BF2509E64A7E4479"
           }
         },

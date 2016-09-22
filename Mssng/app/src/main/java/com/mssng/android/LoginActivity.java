@@ -1,8 +1,9 @@
-package android.com.mssng;
+package com.mssng.android;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import com.mssng.android.R;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
