@@ -51,8 +51,9 @@ data = {"status": "Missing",
 
 
 #db.child("persons").push(data)
+#db.child("persons").child("Besant Singh")
 
-#results = db.child("persons").child("Besant Singh").push(data, user['idToken'])
+results = db.child("persons").push(data, user['idToken'])
 
 data2 = {"status": "Missing", 
         "firstname": "Cheh Pui Kit",
@@ -68,7 +69,7 @@ data2 = {"status": "Missing",
         "latitude": "3.157279",
         "longitude": "101.716010"}
 
-results = db.child("persons").child("Cheh Pui Kit").push(data2, user['idToken'])
+results = db.child("persons").push(data2, user['idToken'])
 
 #####
 data3 = {"status": "Missing", 
@@ -85,7 +86,7 @@ data3 = {"status": "Missing",
         "latitude": "3.157279",
         "longitude": "101.716010"}
 
-results = db.child("persons").child("Rosliana").push(data3, user['idToken'])
+results = db.child("persons").push(data3, user['idToken'])
 ######
 
 #####
@@ -103,7 +104,7 @@ data4 = {"status": "Missing",
         "latitude": "3.157279",
         "longitude": "101.716010"}
 
-results = db.child("persons").child("Nurul Asyiqin").push(data4, user['idToken'])
+results = db.child("persons").push(data4, user['idToken'])
 ######
 
 #####
@@ -121,5 +122,5 @@ data5 = {"status": "Missing",
         "latitude": "3.157279",
         "longitude": "101.716010"}
 
-results = db.child("persons").child("NG YEN NEE").push(data5, user['idToken'])
+results = db.child("persons").push(data5, user['idToken'])
 ######
