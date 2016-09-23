@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent addMissingPersonInfoIntent = new Intent(MainActivity.this, PhotoSelectionActivity.class);
+                startActivity(addMissingPersonInfoIntent);
             }
         });
 
@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Intent addMissingPersonInfoIntent = new Intent(this, AddMissingPersonInfoActivity.class);
-        startActivity(addMissingPersonInfoIntent);
+
     }
 }

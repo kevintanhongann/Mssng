@@ -17,11 +17,13 @@ pprint(responseJSON["data"][1]["id"])
 
 ## Searching FB data
 
-GET /oauth/access_token
-    ?client_id={app-id}
-    &client_secret={app-secret}
-    &grant_type=client_credentials
+###
+# GET /oauth/access_token
+#    ?client_id={app-id}
+#    &client_secret={app-secret}
+#    &grant_type=client_credentials
     
+<<<<<<< HEAD
     327292730656510
     
     48d2edb650a868f357921bb19e9367d8
@@ -38,3 +40,6 @@ url = "https://graph.facebook.com/v2.3/#{fb_id}/apprequests/?access_token=#{clie
 url = "https://graph.facebook.com/v2.3/#{fb_id}/apprequests/?access_token=#327292730656510|XpqICtwU2G_3LZmbuY3_ncuV8-I"
 
 search?q=missing&type=place&center=37.76,-122.427&distance=1000
+=======
+###    
+>>>>>>> 77accc3a996efeaefa97a1d5dc021b225a1ce1c5

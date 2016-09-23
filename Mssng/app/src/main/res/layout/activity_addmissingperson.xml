@@ -24,9 +24,10 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/circleimageview_person"
-                    android:layout_width="56dp"
+                    android:layout_width="72dp"
                     android:layout_gravity="center"
-                    android:layout_height="56dp" />
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_height="72dp" />
 
 
                 <android.support.design.widget.TextInputLayout
@@ -47,16 +48,38 @@
                     <android.support.design.widget.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Last name"
                         android:text="@{person.lastname}" />
                 </android.support.design.widget.TextInputLayout>
 
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:hint="Weight"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:hint="Height"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Last Seen" />
 
-
+                <Button android:id="@+id/button_submit"
+                    android:text="Submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
         </ScrollView>
