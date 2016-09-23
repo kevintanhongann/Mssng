@@ -6,7 +6,6 @@ import android.databinding.Bindable;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by kevintan on 22/09/2016.
@@ -26,33 +25,35 @@ public class Person  extends BaseObservable{
     @Bindable
     private String sex;
     @Bindable
-    private Date created;
+    private String created;
     @Bindable
-    private Date updated;
+    private String updated;
     @Bindable
-    private float height;
+    private String height;
     @Bindable
-    private float weight;
+    private String weight;
     @Bindable
-    private List<String> imageUrls;
+    private String imageUrls;
 
-    private Double latitude;
+    @Bindable
+    private String latitude;
 
-    private Double longitude;
+    @Bindable
+    private String longitude;
 
-    public Double getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Double latitude) {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
-    public Double getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Double longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 
@@ -107,43 +108,43 @@ public class Person  extends BaseObservable{
         this.sex = sex;
     }
 
-    public Date getCreated() {
+    public String getCreated() {
         return created;
     }
 
-    public void setCreated(Date created) {
+    public void setCreated(String created) {
         this.created = created;
     }
 
-    public Date getUpdated() {
+    public String getUpdated() {
         return updated;
     }
 
-    public void setUpdated(Date updated) {
+    public void setUpdated(String updated) {
         this.updated = updated;
     }
 
-    public float getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(float height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
-    public float getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
-    public List<String> getImageUrls() {
+    public String getImageUrls() {
         return imageUrls;
     }
 
-    public void setImageUrls(List<String> imageUrls) {
+    public void setImageUrls(String imageUrls) {
         this.imageUrls = imageUrls;
     }
 

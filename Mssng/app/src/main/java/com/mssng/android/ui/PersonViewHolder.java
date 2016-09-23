@@ -17,12 +17,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class PersonViewHolder extends RecyclerView.ViewHolder {
 
     @BindView(R.id.imageview_person)
-    CircleImageView mImageView;
+    public CircleImageView mImageView;
 
     @BindView(R.id.textview_name)
+    public
     TextView tvName;
 
     @BindView(R.id.textview_lastseen)
+    public
     TextView tvLastSeen;
 
     public PersonViewHolder(View itemView) {

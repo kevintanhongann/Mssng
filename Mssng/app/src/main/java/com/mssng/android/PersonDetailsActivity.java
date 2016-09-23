@@ -9,6 +9,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -28,14 +32,28 @@ public class PersonDetailsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    public void onEvent(EventBusUtil.PersonDetailEvent event) {
-        if (event != null) {
-            viewBinding.setPerson(event.getPerson());
-        }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
     }
 
+    @Override
+    protected void onStop() {
+        EventBus.getDefault().unregister(this);
+        super.onStop();
+    }
+
+    @Subscribe
+    public void onEvent(EventBusUtil.PersonDetailEvent event) {
+        Log.d(TAG, "onEvent "+event.toString());
+        viewBinding.setPerson(event.getPerson());
+    }
+
+    private static final String TAG = "PersonDetailsActivity";
+
     @OnClick(R.id.button_report)
-    void onReportClick(){
+    void onReportClick() {
         AlertDialog alertDialog = new AlertDialog.Builder(this).setTitle("Report").setMessage("Report you have seen the person with geotag? ").setPositiveButton("Okay", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

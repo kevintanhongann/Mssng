@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mssng.android.ui.AutofitRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recyclerview_personlist"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:bind="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    app:numColumns="1">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_personlist"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v7.widget.RecyclerView>
-</LinearLayout>
+</com.mssng.android.ui.AutofitRecyclerView>

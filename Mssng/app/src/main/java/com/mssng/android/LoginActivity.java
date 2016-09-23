@@ -241,6 +241,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private void gotoMain(){
         Intent mainIntent = new Intent(this, MainActivity.class);
         startActivity(mainIntent);
+        finish();
     }
 
     private boolean isEmailValid(String email) {

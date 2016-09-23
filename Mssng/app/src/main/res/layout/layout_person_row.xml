@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:minHeight="?listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:padding="16dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="56dp"
         android:id="@+id/imageview_person"
+        android:layout_width="56dp"
         android:layout_height="56dp" />
 
-    <LinearLayout android:orientation="vertical"
+    <LinearLayout android:paddingLeft="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/textview_name"
-            android:text="Name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Name" />
 
-        <TextView android:text="Last Seen"
+        <TextView
             android:id="@+id/textview_lastseen"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Last Seen" />
 
     </LinearLayout>
-
 
 
 </LinearLayout>
